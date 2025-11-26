@@ -17,7 +17,7 @@ const produtosDB = [
         id: 2,
         nome: "Raios de Sol",
         categoria: "arranjos",
-        imagem: "../images/DSC04602.JPG",
+        imagem: "../images/DSC04693.JPG",
         preco: 120.00,
         status: "encomenda",
         descricao: "Arranjo vibrante de dálias amarelas. Ideal para centro de mesa."
@@ -73,7 +73,7 @@ const produtosDB = [
         id: 8,
         nome: "Pano Bordado",
         categoria: "panos",
-        imagem: "../images/DSC4603.JPG",
+        imagem: "../images/DSC4671.JPG",
         preco: 35.00,
         status: "pronto",
         descricao: "Pano de prato com barrado e bordado manual delicado."
