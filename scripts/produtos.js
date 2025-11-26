@@ -17,7 +17,7 @@ const produtosDB = [
         id: 2,
         nome: "Raios de Sol",
         categoria: "arranjos",
-        imagem: "../images/DSC04693.JPG",
+        imagem: "../images/DSC04602.JPG",
         preco: 120.00,
         status: "encomenda",
         descricao: "Arranjo vibrante de dálias amarelas. Ideal para centro de mesa."
