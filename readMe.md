@@ -128,4 +128,4 @@ Google Fonts (Playfair Display, Great Vibes, Lato)
 Desenvolvido por Greice Lacerda para Cinea Artesanatos.
 Para dúvidas sobre o código ou manutenção, consulte este documento.
 
-# Feito com ❤️ e código.
+# &copy; Cineia Artesanatos. Feito com ❤️ e código.
