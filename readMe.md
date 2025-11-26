@@ -24,9 +24,10 @@ O projeto segue uma arquitetura organizada para facilitar a manutenção:
 
 /
 ├── index.html           # Página Inicial
-├── historia.html        # Página "A Artista"
-├── portfolio.html       # Página de Galeria/Portfólio
-├── contato.html         # Página de Encomendas (Vitrine + Formulário)
+├── pages/               # Arquivos HTML
+|    ├── historia.html        # Página "A Artista"
+|    ├── portfolio.html       # Página de Galeria/Portfólio
+|    └── contato.html         # Página de Encomendas (Vitrine + Formulário)
 │
 ├── styles/              # Arquivos CSS
 │   ├── comuns.css       # Estilos globais (Menu, Rodapé, Variáveis, Fontes)
@@ -41,7 +42,7 @@ O projeto segue uma arquitetura organizada para facilitar a manutenção:
 │   └── contato.js       # Lógica do carrinho, modal e envio para API/Zap
 │
 └── images/              # Pasta de imagens
-    └── fotosCinea/      # Fotos dos produtos e da artista
+    
 
 
 ## 🚀 Como Configurar e Rodar
