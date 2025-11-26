@@ -1,0 +1,324 @@
+/* =========================================
+   ESTILO ESPECÍFICO DA PÁGINA INICIAL (INDEX)
+   ========================================= */
+
+/* 1. Hero Section (A Primeira Impressão) 
+   Focada em suavidade e destaque para a artista 
+*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85vh;
+    /* Ocupa quase a tela toda */
+    padding: 0 5%;
+    background: linear-gradient(135deg, var(--cor-fundo) 0%, #f0f7f0 100%);
+    /* Degradê sutil */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Área de Texto do Hero */
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    z-index: 2;
+    /* Fica acima de elementos decorativos */
+    animation: fadeUp 1s ease forwards;
+    /* Animação de entrada */
+    opacity: 0;
+    /* Começa invisível para animar */
+}
+
+.tagline {
+    font-family: var(--fonte-titulo);
+    color: rgb(9, 201, 9);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+    text-shadow: 2px 2px 1px rgba(130, 125, 125, 0.407);
+}
+
+.hero h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    color: var(--cor-verde-folha);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 1px rgba(130, 125, 125, 0.407);
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+    margin-bottom: 2rem;
+    max-width: 90%;
+    text-shadow: 2px 2px 1px rgba(247, 245, 245, 0.87);
+    font-weight: 600;
+}
+
+#ToqueArte{    
+    font-weight: 600; 
+    color:rgb(109, 20, 2);
+    font-size: 1.3rem;
+}
+
+/* Área da Imagem (Círculo Orgânico) */
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- NOVO ESTILO PARA A FOTO COM MOLDURA --- */
+.artist-photo {
+    /* Ajustamos um pouco o tamanho para não ficar gigante */
+    width: 380px;
+    height: auto;
+    /* Altura automática para não distorcer a imagem quadrada */
+    object-fit: cover;
+
+    /* Nova Borda: Um quadrado com cantos suavemente arredondados */
+    border-radius: 30px;
+
+    /* Sombra 3D profunda: Parece um quadro flutuando na parede */
+    box-shadow: 15px 20px 30px rgba(85, 107, 47, 0.25);
+
+    /* Borda sutil: Troquei o branco por um rosa bem clarinho para combinar com as flores da foto */
+    border: 4px solid var(--cor-rosa-petala);
+
+    transition: all 0.5s ease;
+    /* Mantemos a animação dela flutuando suavemente */
+    animation: floatImage 6s ease-in-out infinite;
+}
+
+/* Efeito extra: quando passar o mouse, o quadro "se aproxima" */
+.artist-photo:hover {
+    transform: scale(1.02);
+    /* Aumenta só um pouquinho */
+    box-shadow: 20px 25px 40px rgba(85, 107, 47, 0.3);
+    /* Sombra aumenta */
+}
+
+/* --- ESCONDENDO O ELEMENTO ANTIGO --- */
+/* Como a nova foto já tem moldura de flores, o círculo rosa de fundo fica exagerado. Vamos escondê-lo. */
+.decorative-circle {
+    display: none;
+}
+
+/* Efeito decorativo atrás da foto */
+.decorative-circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background-color: var(--cor-rosa-petala);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.3;
+    top: -20px;
+    right: 10%;
+    filter: blur(40px);
+    /* Borrão para parecer aquarela */
+}
+
+/* 2. Galeria de Prévia (Grid Artístico)
+*/
+.preview-gallery {
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, var(--cor-fundo) 0%, #f0f7f0 100%);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h3 {
+    font-family: var(--fonte-assinatura);
+    font-size: 3rem;
+    color: var(--cor-verde-folha);
+}
+
+.section-header p {
+    color: var(--cor-verde-suave);
+    font-family: var(--fonte-titulo);
+    letter-spacing: 1px;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Cria colunas responsivas automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    /* Garante que a imagem não saia da borda ao dar zoom */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    height: 350px;
+    /* Altura fixa para alinhar */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Efeito Overlay (Texto aparece ao passar o mouse) */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(85, 107, 47, 0.7);
+    /* Verde transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Invisível por padrão */
+    transition: opacity 0.4s ease;
+}
+
+.overlay span {
+    color: var(--cor-branco);
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    border: 1px solid var(--cor-branco);
+    padding: 10px 20px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+/* Interação Hover na Galeria */
+.gallery-item:hover img {
+    transform: scale(1.1);
+    /* Zoom suave na imagem */
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+    /* Mostra o overlay */
+}
+
+.gallery-item:hover .overlay span {
+    transform: translateY(0);
+    /* Texto sobe suavemente */
+}
+
+/* 3. Mini Sobre (Faixa de Destaque)
+*/
+.mini-about {
+    padding: 6rem 5%;
+    /* Usando uma das fotos como fundo */
+    background-size: cover;
+    background-attachment: fixed;
+    /* Efeito Parallax (fundo parado ao rolar) */
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Máscara escura sobre a foto de fundo para ler o texto */
+.mini-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(232, 7, 7, 0);
+    /* Camada branca translúcida */
+}
+
+.text-box {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 700px;
+    padding: 3rem;
+    border: 2px solid var(--cor-verde-folha);
+    background-color: rgba(255, 255, 255, 0.779);
+}
+
+.text-box h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    color: var(--cor-verde-folha);
+    margin-bottom: 1rem;
+}
+
+/* 4. Animações (Keyframes)
+*/
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 5. Responsividade para a Home
+*/
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        /* Foto em cima, texto embaixo no celular */
+        text-align: center;
+        padding-top: 2rem;
+        min-height: auto;
+    }
+
+    .hero-content {
+        margin-top: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .artist-photo {
+        width: 280px;
+        height: 280px;
+    }
+
+    .decorative-circle {
+        width: 300px;
+        height: 300px;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomendas | Cinea Artesanatos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Caminhos para os estilos -->
+    <link rel="stylesheet" href="../styles/comuns.css">
+    <link rel="stylesheet" href="../styles/contato.css">
+</head>
+
+<body class="bg-portfolio">
+
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Cinea Artesanatos</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="./historia.html">A Artista</a></li>
+            <li><a href="./portfolio.html">Portfólio</a></li>
+            <li><a href="./contato.html" class="active">Encomendas</a></li>
+        </ul>
+        <div class="menu-mobile">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="contact-header">
+        <h2>Catálogo de Encomendas</h2>
+        <p style="font-size: 1.2rem; color:rgb(76, 7, 7);">Selecione uma peça para personalizar e solicitar seu
+            orçamento.</p>
+
+        <!-- BOTÕES DE FILTRO -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="quadros">Quadros</button>
+            <button class="filter-btn" data-filter="arranjos">Arranjos</button>
+            <button class="filter-btn" data-filter="panos">Panos de Prato</button>
+        </div>
+    </header>
+
+    <main class="order-container">
+        <!-- VITRINE DE PRODUTOS -->
+        <section class="catalog-section">
+            <div class="products-grid" id="productsGrid">
+                <!-- Produtos inseridos via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE PEDIDO + FORMULÁRIO -->
+    <div class="order-modal" id="orderModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+            <div class="modal-body">
+                <!-- Coluna da Esquerda: Produto -->
+                <div class="modal-product-col">
+                    <div class="modal-image">
+                        <img id="modalImg" src="" alt="Produto">
+                        <span id="modalStatus" class="status-badge"></span>
+                    </div>
+
+                    <h3 id="modalTitle">Nome do Produto</h3>
+                    <p id="modalDesc">Descrição...</p>
+                    <h4 class="price" id="modalPrice">R$ 0,00</h4>
+
+                    <div class="quantity-control">
+                        <label>Quantidade:</label>
+                        <div class="qty-inputs">
+                            <button type="button" id="btnMinus">-</button>
+                            <input type="number" id="qtyInput" value="1" min="1" readonly>
+                            <button type="button" id="btnPlus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="total-display">
+                        Total Estimado: <span id="modalTotal">R$ 0,00</span>
+                    </div>
+                </div>
+
+                <!-- Coluna da Direita: Formulário do Cliente -->
+                <div class="modal-form-col">
+                    <h3>Seus Dados para Envio</h3>
+                    <p class="form-instruction">Preencha para finalizarmos o pedido via WhatsApp.</p>
+
+                    <form id="modalForm">
+                        <div class="input-group">
+                            <label for="nome"><i class="fas fa-user"></i> Nome Completo</label>
+                            <input type="text" id="nome" placeholder="Seu nome" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</label>
+                            <input type="tel" id="whatsapp" placeholder="(DD) 99999-9999" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="endereco"><i class="fas fa-map-marker-alt"></i> Endereço de Entrega</label>
+                            <textarea id="endereco" rows="2" placeholder="Rua, Número, Bairro..." required></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="observacoes"><i class="fas fa-comment-dots"></i> Observações</label>
+                            <textarea id="observacoes" rows="3" placeholder="Detalhes adicionais (opcional)"></textarea>
+                        </div>
+                    </form>
+
+                    <button id="btnFinalizeOrder" class="btn-primary btn-full">
+                        Confirmar e Encomendar <i class="fab fa-whatsapp"></i>
+                    </button>
+                    <p class="secure-note"><i class="fas fa-lock"></i> Seus dados são enviados diretamente para a
+                        artista.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.instagram.com/cinea.artes?igsh=Y2pyNmE3djhmc2s1" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5521987170742&text=Ol%C3%A1" target="_blank"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/17SFMX4u6Y/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>&copy; 2024 Cinea Artesanatos. Feito com amor.</p>
+        </div>
+    </footer>
+
+    <!-- Caminhos para os scripts -->
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/produtos.js"></script>
+    <script src="../scripts/contato.js"></script>
+</body>
+
+</html>
