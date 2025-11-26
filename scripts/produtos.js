@@ -73,7 +73,7 @@ const produtosDB = [
         id: 8,
         nome: "Pano Bordado",
         categoria: "panos",
-        imagem: "../images/DSC4671.JPG",
+        imagem: "../images/DSC04671.JPG",
         preco: 35.00,
         status: "pronto",
         descricao: "Pano de prato com barrado e bordado manual delicado."
