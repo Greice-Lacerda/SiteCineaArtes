@@ -8,7 +8,7 @@ const produtosDB = [
         id: 1,
         nome: "Jardim Vertical",
         categoria: "quadros", // Necessário para o filtro funcionar
-        imagem: "../images/DSC04589.jpg",
+        imagem: "../images/DSC04589.JPG",
         preco: 150.00,
         status: "pronto",
         descricao: "Quadro decorativo com folhagens preservadas. Tamanho 30x40cm."
@@ -17,7 +17,7 @@ const produtosDB = [
         id: 2,
         nome: "Raios de Sol",
         categoria: "arranjos",
-        imagem: "../images/DSC04602.jpg",
+        imagem: "../images/DSC04602.JPG",
         preco: 120.00,
         status: "encomenda",
         descricao: "Arranjo vibrante de dálias amarelas. Ideal para centro de mesa."
@@ -35,7 +35,7 @@ const produtosDB = [
         id: 4,
         nome: "Primavera Viva",
         categoria: "arranjos",
-        imagem: "../images/DSC04593.jpg",
+        imagem: "../images/DSC04593.JPG",
         preco: 95.00,
         status: "encomenda",
         descricao: "Buquê colorido e alegre. Perfeito para presentear."
@@ -44,7 +44,7 @@ const produtosDB = [
         id: 5,
         nome: "Arte em Folha",
         categoria: "quadros",
-        imagem: "../images/DSC04581.jpg",
+        imagem: "../images/DSC04581.JPG",
         preco: 80.00,
         status: "pronto",
         descricao: "Detalhes de folhagem esculpida à mão. Peça minimalista."
@@ -53,7 +53,7 @@ const produtosDB = [
         id: 6,
         nome: "Elegância Clássica",
         categoria: "arranjos",
-        imagem: "../images/DSC04613.jpg",
+        imagem: "../images/DSC04613.JPG",
         preco: 200.00,
         status: "encomenda",
         descricao: "Vaso grande com arranjo floral completo e sofisticado."
@@ -73,7 +73,7 @@ const produtosDB = [
         id: 8,
         nome: "Pano Bordado",
         categoria: "panos",
-        imagem: "../images/DSC04578.jpg",
+        imagem: "../images/DSC04578.JPG",
         preco: 35.00,
         status: "pronto",
         descricao: "Pano de prato com barrado e bordado manual delicado."
