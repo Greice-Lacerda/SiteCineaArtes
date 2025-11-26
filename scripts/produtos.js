@@ -8,7 +8,7 @@ const produtosDB = [
         id: 1,
         nome: "Jardim Vertical",
         categoria: "quadros", // Necessário para o filtro funcionar
-        imagem: "../images/DSC04589.JPG",
+        imagem: "../images/DSC04588.JPG",
         preco: 150.00,
         status: "pronto",
         descricao: "Quadro decorativo com folhagens preservadas. Tamanho 30x40cm."
@@ -26,7 +26,7 @@ const produtosDB = [
         id: 3,
         nome: "Suavidade Rosa",
         categoria: "quadros",
-        imagem: "../images/DSC04587.jpg",
+        imagem: "../images/DSC04587.JPG",
         preco: 180.00,
         status: "pronto",
         descricao: "Composição delicada com tons de rosa pastel e moldura branca."
@@ -73,7 +73,7 @@ const produtosDB = [
         id: 8,
         nome: "Pano Bordado",
         categoria: "panos",
-        imagem: "../images/DSC4603",
+        imagem: "../images/DSC4603.JPG",
         preco: 35.00,
         status: "pronto",
         descricao: "Pano de prato com barrado e bordado manual delicado."
