@@ -78,4 +78,14 @@ const produtosDB = [
         status: "pronto",
         descricao: "Pano de prato com barrado e bordado manual delicado."
     }
+
+    {
+        id: 9,
+        nome: "velas",
+        categoria: "panos",
+        imagem: "../images/DSC04578.jpg",
+        preco: 35.00,
+        status: "pronto",
+        descricao: "Pano de prato com barrado e bordado manual delicado."
+    }
 ];

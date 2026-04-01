@@ -1,6 +1,6 @@
-# 🌿 Cinea Artesanatos - Website & Catálogo Virtual
+# 🌿 Cinea Artes - Website & Catálogo Virtual
 
-Este projeto é um website institucional e catálogo de encomendas desenvolvido para o ateliê Cinea Artesanatos. O site apresenta a história da artista, um portfólio visual e um sistema de encomendas integrado ao WhatsApp e Google Sheets (sem necessidade de backend complexo).
+Este projeto é um website institucional e catálogo de encomendas desenvolvido para o ateliê Cinea Artes. O site apresenta a história da artista, um portfólio visual e um sistema de encomendas integrado ao WhatsApp e Google Sheets (sem necessidade de backend complexo).
 
 ## 🎨 Funcionalidades
 
@@ -125,7 +125,7 @@ Google Fonts (Playfair Display, Great Vibes, Lato)
 
 ## 📞 Contato e Suporte
 
-Desenvolvido por Greice Lacerda para Cinea Artesanatos.
+Desenvolvido por Greice Lacerda para Cinea Artes.
 Para dúvidas sobre o código ou manutenção, consulte este documento.
 
 # Feito com ❤️ e código.
